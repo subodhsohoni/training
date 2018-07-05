@@ -1,0 +1,2 @@
+Azure Function URL
+https://vstsclient.azurewebsites.net/api/HttpTriggerCSharp1?code=jhu8FjD4aMqaJmwtLFjgJtOcLAxYza8BD/cK0c7wMiZ8Tk7ymmeXAw==
