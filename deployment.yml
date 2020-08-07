@@ -1,9 +1,12 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: aksdemo
 spec:
-  replicas: 1
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aksdemo-app
   template:
     metadata:
       labels:
@@ -11,7 +14,14 @@ spec:
     spec:
       containers:
         - name: aksdemo-services-app
-          image: aksdemoregi.azurecr.io/aksdemo:latest
+          image: ssaz400cr.azurecr.io/ssgs-ems:latest
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"
           ports:
             - containerPort: 80
 ---
